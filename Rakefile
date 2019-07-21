@@ -20,5 +20,8 @@ namespace :db do
     Student.create_table
   end
     
-
+  desc "Make sure you have a 'console' rake task"
+  task :seed do
+      require_relative './db/seeds.rb'
   end
+end
