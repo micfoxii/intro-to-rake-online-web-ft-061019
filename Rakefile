@@ -1,3 +1,5 @@
+require 'pry'
+
 task :environment do
   require_relative './config/environment'
 end
@@ -20,7 +22,7 @@ namespace :db do
     Student.create_table
   end
     
-  desc "Make sure you have a 'console' rake task"
+  desc "seed the database with some dummy data"
   task :seed do
       require_relative './db/seeds.rb'
   end
