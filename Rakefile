@@ -16,13 +16,13 @@ end
 
 namespace :db do 
   desc 'migrate changes to your database'
-    task :migrate => :environment do
-      Student.create_table
-    end
+  task :migrate => :environment do
+    Student.create_table
+  end
     
-    desc "Make sure you have a 'console' rake task"
-      task :seed do
-        require_relative './db/seeds.rb'
-      end
-    end
+  desc "Make sure you have a 'console' rake task"
+  task :seed do
+      require_relative './db/seeds.rb'
+  end
+end
   end
